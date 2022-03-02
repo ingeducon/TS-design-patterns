@@ -24,6 +24,12 @@ describe("observer pattern", () => {
   });
 
   it("fan should turn off when the temperature is less than 25", () => {
-    throw new Error("Not implemented yet");
+    const weatherStation = new WeatherStation();
+
+    const temperatureDisplay = new Fan(weatherStation);
+    temperatureDisplay.turnOn;
+
+    weatherStation.setTemperature(22);
+    expect(temperatureDisplay.getState()).toEqual(FanState.Off);
   });
 });
