@@ -1,7 +1,9 @@
-import {} from "./state";
+import { Context, ConcreteStateA, ConcreteStateB } from "./state";
 describe("state pattern", () => {
   it("???", () => {
-    // TODO
-    throw new Error("Not implemented yet");
+    const context = new Context(new ConcreteStateA());
+    context.request1();
+    const context2 = new Context(new ConcreteStateB());
+    context2.request1();
   });
 });
